@@ -1,0 +1,113 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Geo', sans-serif;
+    font-weight: 900;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar,p{
+    z-index: 1;
+}
+.logo{  
+    margin-right: 700px;
+    margin-left: 70px;
+    font-size: 30pt;
+}
+.logo a{
+    font-size: 30pt;
+}
+.scrolled{
+    background: rgba(0, 0, 0, 0.9)!important;
+}
+.logo span:hover{
+    color: #fea116!important;
+}
+/* .img-kunai:hover{
+    display: none;
+} */
+.nav-scroll{
+    background: #060001e2;
+} 
+
+.nav-item .bg-primary:active, .nav-item :hover{
+ color: #dc3545 !important;
+}
+
+.btn:hover{
+    opacity: 0.95;
+}
+a{
+    color: black !important;
+    font-size:20px;
+}
+.progress{
+    border-radius: 50px;
+}
+.progress-in{
+    background:#dc3545;
+    border-radius: 50px;
+}
+
+.img-kunai-data{
+    transform: rotate(-30deg);
+    
+}
+.img-kunai-data:hover{
+    transform:  rotate(330deg);
+    transition: all 1.5s;
+}
+.kunai-100{
+    transform:rotate(100deg);
+}
+.kunai-70{
+    transform:rotate(-70deg);
+}
+.service .icon,
+.service h4,
+.service p{
+    align-items: center;
+    text-align: center;
+}
+
+.service .icon img{
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.service .card{
+    text-align: center;
+    justify-content: center;
+}
+
+@keyframes appear {
+    0% {
+    opacity: 0;
+    transform: scale(2);
+    }
+    50% {
+    opacity: 1;
+    transform: rotate(50deg);
+    }
+    100% {
+    transform: scale(0deg);
+    }
+    }
+    .service .icon img:hover {
+        animation: appear 3s 0 linear;
+        text-align: center;
+        transform: scale(1.25);
+        transform-origin: 50% 50%;
+        }
+        .service h4:hover{
+            transform: scale(1.2);
+        }   
+        .service .card:hover{
+            transform: scale(1.2);
+        }
