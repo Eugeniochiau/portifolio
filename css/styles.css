@@ -32,9 +32,7 @@ body{
 /* .img-kunai:hover{
     display: none;
 } */
-.nav-scroll{
-    background: #060001e2;
-} 
+ 
 
 .nav-item .bg-primary:active, .nav-item :hover{
  color: #dc3545 !important;
@@ -69,6 +67,16 @@ a{
 .kunai-70{
     transform:rotate(-70deg);
 }
+
+/* about */
+
+/* about-info */
+.about-info{    background: rgba(0, 0, 0, 0.055)!important;
+}
+
+/* skill */
+
+/* servicos */
 .service .icon,
 .service h4,
 .service p{
@@ -86,7 +94,7 @@ a{
     justify-content: center;
 }
 
-@keyframes appear {
+/* @keyframes appear {
     0% {
     opacity: 0;
     transform: scale(2);
@@ -98,7 +106,7 @@ a{
     100% {
     transform: scale(0deg);
     }
-    }
+    } */
     .service .icon img:hover {
         animation: appear 3s 0 linear;
         text-align: center;
