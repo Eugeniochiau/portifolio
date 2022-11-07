@@ -43,6 +43,7 @@ function dowload(){
         this.src="img/minato (2).png";
         this.classList.remove('kunai-70');
         minato.src="img/kunai.png";
+        minato.classList.add('');
     });
     kunai1.addEventListener('mouseout',function(){
         this.src="img/kunai.png";

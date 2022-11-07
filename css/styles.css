@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap'); */
 
 body{
     margin: 0;
@@ -71,9 +71,18 @@ a{
 /* about */
 
 /* about-info */
-.about-info{    background: rgba(0, 0, 0, 0.055)!important;
+.about-info{
+    background: rgba(0, 0, 0, 0.095)!important;
 }
-
+/* .about .card h5, .service .card h5, .contact .card h5 {
+    height: 30px;
+    width: 100%;
+    font-size:30pt;
+} */
+/* .card img{
+    height: 150px;
+    width: 100%;  
+} */
 /* skill */
 
 /* servicos */
@@ -94,7 +103,7 @@ a{
     justify-content: center;
 }
 
-/* @keyframes appear {
+@keyframes appear {
     0% {
     opacity: 0;
     transform: scale(2);
@@ -106,7 +115,7 @@ a{
     100% {
     transform: scale(0deg);
     }
-    } */
+    } 
     .service .icon img:hover {
         animation: appear 3s 0 linear;
         text-align: center;
