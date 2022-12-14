@@ -1,28 +1,44 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap'); */
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-weight: 900;
-}
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+/* nav-bar */
 .navbar,p{
     z-index: 1;
 }
 .logo{  
-    margin-right: 700px;
-    margin-left: 70px;
+    /* margin-right: 700px; */
+    margin-left: 0px;
     font-size: 30pt;
 }
 .logo a{
-    font-size: 30pt;
+    font-size: 4rem;
+    background-image: linear-gradient(to right,#dc3545 40%,#fea116 70%);
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
 }
+.logo a:hover{
+    font-size: 4rem;
+    background-image: linear-gradient(to right,#fea116 30%,#dc3545 80%);
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+
 .scrolled{
     background: rgba(0, 0, 0, 0.9)!important;
 }
@@ -41,6 +57,12 @@ body{
 .btn:hover{
     opacity: 0.95;
 }
+
+.main-content{
+
+    /* background-image: linear-gradient(-90deg,rgb(214, 221, 18),rgb(255, 255, 0),rgba(7, 4, 4, 0.154)); */
+}
+
 a{
     color: black !important;
     font-size:20px;
@@ -66,6 +88,12 @@ a{
 }
 .kunai-70{
     transform:rotate(-70deg);
+}
+.kunai-width{
+    /* width: 100%; */
+    /* max-width: 20%; */
+    height: 20%;
+    /* max-height: 50%; */
 }
 
 /* about */
@@ -103,28 +131,33 @@ a{
     justify-content: center;
 }
 
-@keyframes appear {
-    0% {
-    opacity: 0;
-    transform: scale(2);
-    }
-    50% {
-    opacity: 1;
-    transform: rotate(50deg);
-    }
-    100% {
-    transform: scale(0deg);
-    }
+    @keyframes appear {
+        0% {
+        opacity: 0;
+        transform: scale(2);
+        }
+        50% {
+        opacity: 1;
+        transform: rotate(50deg);
+        }
+        100% {
+        transform: scale(0deg);
+        }
     } 
     .service .icon img:hover {
         animation: appear 3s 0 linear;
         text-align: center;
         transform: scale(1.25);
-        transform-origin: 50% 50%;
+        transform-origin: 50% 50%;       
         }
+
         .service h4:hover{
             transform: scale(1.2);
-        }   
-        .service .card:hover{
-            transform: scale(1.2);
         }
+
+        .service .item:hover{
+            transform: scale(1.2);
+            border:0;
+        }
+
+        
