@@ -1,6 +1,27 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap'); */
 
+/* colors */
+/* .text-primary{
+    color: #ffd400 !important;
+} */
+/* 
+.text-danger{
+    color: #d90368 !important;  
+}
+.bg-danger{
+    background-color: #d90368 !important;
+} */
+.text-dark{
+    color:#2e2943 !important;
+}
+.text-info{
+    color: #230fb3 !important;
+}
+ p{
+    color:#2d2d2d !important
+ }
+
 *{
     margin: 0;
     padding: 0;
@@ -40,10 +61,10 @@ body{
 }
 
 .scrolled{
-    background: rgba(0, 0, 0, 0.9)!important;
+    background: #454548 !important;
 }
 .logo span:hover{
-    color: #fea116!important;
+    color: #fea116 !important;
 }
 /* .img-kunai:hover{
     display: none;
@@ -67,13 +88,7 @@ a{
     color: black !important;
     font-size:20px;
 }
-.progress{
-    border-radius: 50px;
-}
-.progress-in{
-    background:#dc3545;
-    border-radius: 50px;
-}
+
 
 .img-kunai-data{
     transform: rotate(-30deg);
@@ -100,7 +115,8 @@ a{
 
 /* about-info */
 .about-info{
-    background: rgba(0, 0, 0, 0.095)!important;
+    background-image: linear-gradient(to bottom1000+``1 ``,white 5%, #bbb 95%);
+    /* background: #eadeda!important; */
 }
 /* .about .card h5, .service .card h5, .contact .card h5 {
     height: 30px;
@@ -112,6 +128,19 @@ a{
     width: 100%;  
 } */
 /* skill */
+.skills{
+    background-image: linear-gradient(to bottom, #bbb 60%, #fff );
+}
+.skills .skill-item{
+    color:#06001a;
+}
+.skills .skill-item .progress-in{
+    background-color: #df081c;
+    border-radius: 50px;
+}
+.progress{
+    border-radius: 50px;
+}
 
 /* servicos */
 .service .icon,
