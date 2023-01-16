@@ -1,5 +1,7 @@
-  var navbar=document.querySelector(".navbar");
-  const mode=document.querySelector(".btn-mode");
+var navbar=document.querySelector(".navbar");
+const mode=document.querySelector(".btn-mode");
+var nav_toggle=document.querySelector(".navbar-toggler");
+var nav_collapse=document.querySelector(".navbar-collapse");
 // antes do carregamento
    (function(){
     var main=document.querySelector(".main-content");
@@ -20,7 +22,7 @@
    
 //    navbar transparente
 window.addEventListener('scroll', function(){
-    if(this.window.pageYOffset>100)
+    if(this.window.pageYOffset>100 && !nav_collapse.classList.contains("d-none"))
     navbar.classList.add('scrolled','shadow-sm');
     else navbar.classList.remove('scrolled','shadow-sm');
 });
@@ -108,3 +110,21 @@ function dowload(){
 
 //     }
 // }
+
+
+nav_toggle.addEventListener('click',(event)=>{
+    console.log(nav_collapse);
+    if(nav_collapse.classList.contains("d-none")){
+      nav_collapse.classList.remove("d-none"); 
+      navbar.classList.toggle('scrolled');
+      navbar.classList.add('shadow-sm')
+      return
+    }
+    else {
+        nav_collapse.classList.add("d-none");
+        navbar.classList.toggle('scrolled');
+        navbar.classList.remove("shadow-sm");
+        return
+    }
+    
+});
