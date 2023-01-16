@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
     
 </head>
-<body class="bg-white" >
+<body class="bg-primary light-mode" id="mode" >
     <div class="loading" onload="someFunction()" style="height: 100vh; background: #040204;">
         <center>
             <img src="img/Naruto Sharingan GIF - Naruto Sharingan Rasengan - Discover & Share GIFs.gif"  alt="">
@@ -20,7 +20,7 @@
     
     <nav class="navbar navbar-expand-lg d-none bg-color " >
         <div class="container">
-            <div class="d-flex align-items-start logo">
+            <div class=" align-items-start logo">
 
           <a class="navbar-brand text-danger d-flex justify-content-start active" aria-current="page" href="#">Naruto</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
           </div>
         </div>
       </nav>
-   
+    <button class="btn-mode btn fixed-top d-none"><img src="img/mangeki sharinga.png" class="img-fluid img-mode"  alt=""></button>
     <section class="main-content d-none" >
         <section class="home section" id="home">
             <div class="container">
@@ -59,13 +59,13 @@
                         </div>
                         <div class=" home-info padd-15 p-md-5 p-lg-0" style="margin-top: 100px;">
                         
-                            <h3 class="hello mb-5">
-                                óla, meu nome é <span class="name text-danger"> Eugénio Chiau</span>
+                            <h3 class="hello text-info  mb-5">
+                                Ola, meu nome é <span class="name text-danger"> Eugénio Chiau</span>
                             </h3>
-                            <h3 class="myprofession mb-5">
+                            <h3 class="myprofession text-info mb-5">
                                 Eu sou <span class="typing text-primary">Programador Web</span>
                             </h3>
-                            <p> Eu desenvolvedor web a 2 ano. Meu ponto forte é o back end</p>
+                            <!-- <p> Eu desenvolvedor web a 2 ano. Meu ponto forte é o back end</p> -->
                             <a href="https://github.com/eugeniochiau" target="_blank" class="btn btn-danger rounded-pill"> Meu GitHub</a>
                             <button onclick="dowload()" class="btn btn-primary rounded-pill cv-1"> baixar CV</button>
                         </div>
@@ -85,17 +85,12 @@
         <section class="about" id="about" style="margin-top: 100px;">
             <div class="row">
                 <center>
-                    <div class="col-4 card text-bg-dark bg-transparent border-0 " style="align-items: center;">
-                        <img src="img/naruto/ligth-mode/pergaminhos de selos.png" class="card-img" alt="...">
-                        <center class="card-img-overlay align-items-center " style="margin-top: 40px;">
-                            <h3 class="card-title text-danger">Sobre Mim</h3>
-                        </center>
-                    </div>
-                </center>
+                    <h3 class="title text-danger">Sobre Mim</h3>
+                </center>       
             </div>
             <div class="row" style="margin-top:40px;">
                 <div class="about-content ">
-                    <div class="row about-info p-5" style="margin-bottom: 0;">
+                    <div class="row about-info d-flex justify-content-center col-md-11 p-5">
                         <div class="img col-lg-6 col-xl-5 d-md-none d-lg-inline-block align-items-center">
                             <img src="img/naruto/ligth-mode/kakashi.png" class="img-fluid d-none d-xl-inline-block"style= " margin-top:-20px;" alt="">        
                             <img src="img/naruto/ligth-mode/kakashi 2.png" class="img-fluid d-none d-lg-inline-block d-xl-none "style= " margin-top:-20px;" alt="">        
@@ -124,65 +119,68 @@
                         <div class="row skills pt-5 pb-5" >
                             <div class="row">
                                 <center>
-                                    <h3 class="text-info">Skills</h3>
+                                    <h3 class="title title-skills text-danger">Skills</h3>
                                 </center>
                                 <div class="col-md-6 col-lg-7 px-5">
                                     <div class="skill-item mb-4">
-                                        <h5>HTML</h5>
+                                        <h5 class="text-secondary">HTML</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 90%;"></div>
                                             <div class="skill-percent">90%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>JS</h5>
+                                        <h5 class="text-secondary">JS</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 50%;"></div>
                                             <div class="skill-percent">50%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>BootStrap</h5>
+                                        <h5 class="text-secondary">BootStrap</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 75%;"></div>
                                             <div class="skill-percent">75%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>CSS</h5>
+                                        <h5 class="text-secondary">CSS</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 60%;"></div>
                                             <div class="skill-percent">60%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>Laravel</h5>
+                                        <h5 class="text-secondary">Laravel</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 80%;"></div>
                                             <div class="skill-percent">80%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>Git | GitHub</h5>
+                                        <h5 class="text-secondary">Git | GitHub</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 60%;"></div>
                                             <div class="skill-percent">60%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>Java</h5>
+                                        <h5 class="text-secondary">Java</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 60%;"></div>
                                             <div class="skill-percent">60%</div>
                                         </div>
                                     </div>
                                     <div class="skill-item mb-4">
-                                        <h5>C#</h5>
+                                        <h5 class="text-secondary">C#</h5>
                                         <div class="progress">
                                             <div class="progress-in" style="width: 60%;"></div>
                                             <div class="skill-percent">60%</div>
                                         </div>
                                     </div>
+                                    <!-- <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"   aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                      </div> -->
                                 </div>
                                 <div class=" col-lg-4 col-md-5 img-madara d-sm-none d-md-inline">
                                     <img src="img/naruto/ligth-mode/madara.png" class="img-fluid col-lg-8 justify-content-center" alt="">
@@ -190,13 +188,13 @@
                             </div>
                         </div>
                     
-                    <div class="row pt-5">
-                        <div class="col-lg-5 img-minato  d-lg-flex d-md-none " style="margin-top: -150px;">
-                            <img src="img//naruto/ligth-mode/minato.png" class="img-fluid" alt="">
+                    <div class="row mt-5 bg-secondary">
+                        <div class="col-lg-5 img-naruto  d-lg-flex d-md-none  " >
+                            <img src="img//naruto/ligth-mode/naruto.png" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-12 col-lg-7 px-5">
-                            <div class="education padd-15">
-                                <h3 class="tite text-success">Educação</h3>
+                            <div class="education card p-3 my-3 ">
+                                <h3 class="title text-danger">Educação</h3>
                                 <div class="row ms-3">
                                     <div class="timeline-box padd-15">
                                         <div class="timeline shadow-dark">
@@ -207,48 +205,48 @@
                                                     <img src="img/naruto/ligth-mode/kunai.png" class="col-md-2 d-none d-sm-inline-flex img-fluid img-kunai-data" alt="">
                                                     <i class="fas fa-calender text-danger">2015-2020</i>
                                                 </h3>
-                                                <h4 class="timeline-title">curso de Técnico de Sistemas Informáticos</h4>
-                                                <p class="timeline-text">  Fiz o curso de Sistemas Informáticos no Instituto de Transportes e Comunicações (ITC)</p>
+                                                <h4 class="timeline-title text-info">curso de Técnico de Sistemas Informáticos</h4>
+                                                <p class="timeline-text text-secondary">  Fiz o curso de Sistemas Informáticos no Instituto de Transportes e Comunicações (ITC)</p>
                                             </div>
                                             <!-- time line item -->
-                                            <div class="timeline-item">
+                                            <div class="timeline-item pt-5">
                                                 <div class="circle-dot"></div>
                                                 <h3 class="timeline-date">
                                                     <img src="img/naruto/ligth-mode/kunai.png" class="col-md-2 img-fluid img-kunai-data" alt="">
                                                     <i class="fas fa-calender text-danger">2011-2014</i>
                                                 </h3>
-                                                <h4 class="timeline-title">Ensino Secundário Geral</h4>
-                                                <p class="timeline-text">Fiz o ensino secundario de 8<sup>a</sup>-10<sup>a</sup> classe</p>
+                                                <h4 class="timeline-title text-info">Ensino Secundário Geral</h4>
+                                                <p class="timeline-text text-secondary">Fiz o ensino secundario de 8<sup>a</sup>-10<sup>a</sup> classe</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="experience padd-15">
-                                <h3 class="title text-success">Experiência</h3>
+                            <div class="experience card my-3 p-3 padd-15">
+                                <h3 class="title text-danger">Experiência</h3>
                                 <div class="row ps-3">
                                     <div class="timeline-box padd-15">
                                         <div class="timeline shadow-dark">
                                             <!-- time line item -->
                                             <div class="timeline-item">
                                                 <div class="circle-dot"></div>
-                                                <h3 class="timeline-date">
+                                                <h3 class="timeline-date ">
                                                     <img src="img/naruto/ligth-mode/kunai.png" class="col-md-2 img-fluid img-kunai-data" alt="">
-                                                    <i class="fas fa-calender text-danger">2021-actualmente</i>
+                                                    <i class="fas fa-calender text-primary">2021-actualmente</i>
                                                 </h3>
-                                                <h4 class="timeline-title">Freelancer</h4>
-                                                <p class="timeline-text">desenvolvimento de sistemas de gestão equipamento, 
+                                                <h4 class="timeline-title text-info">Freelancer</h4>
+                                                <p class="timeline-text text-secondary">desenvolvimento de sistemas de gestão equipamento, 
                                                     e-commerce de venda online de comida e sistema de aluguer de materias de decoracao</p>
                                             </div>
                                             <!-- time line item -->
-                                            <div class="timeline-item">
+                                            <div class="timeline-item pt-5">
                                                 <div class="circle-dot"></div>
                                                 <h3 class="timeline-date">
                                                     <img src="img/naruto/ligth-mode/kunai.png" class="col-md-2 img-fluid img-kunai-data" alt="">
                                                     <i class="fas fa-calender text-danger">2020-2021</i>
                                                 </h3>
-                                                <h4 class="timeline-title">Estágio de 5 meses no MEF</h4>
-                                                <p class="timeline-text">desempenhado as seguintes funções:<br/>
+                                                <h4 class="timeline-title text-info">Estágio de 5 meses no MEF</h4>
+                                                <p class="timeline-text text-secondary">desempenhado as seguintes funções:<br/>
                                                 • Resolução problemas de Rede;<br/>
                                                 • Resolução de problemas de impressora;<br/>
                                                 • Apoio ao utente na óptica do utilizador (pacote de oficce);<br>
@@ -286,10 +284,11 @@
                     <div class="item col-md-3 mx-5 service-item ">
                         <div class="service-item-inner">
                             <center class="icon">
-                                <img src="img/naruto/ligth-mode/simbolo da akatsuki.png" class="img-fluid"  alt="">
+                                <img src="img/naruto/ligth-mode/akatsuki.png" class="img-fluid img-akatsuki"  alt="">
                     
                             </center>
-                            <h4 class="text-success ">web Design</h4>
+                            <h4 class="text-danger ">web Design</h4>
+                            <p class="text-secondary">desenvolvimento de websites, blogs portifolios modernos e com layouts bonitos</p>
                         </div>  
                     </div>
                     <!-- service item end -->
@@ -297,10 +296,11 @@
                       <div class=" item col-md-3 service-item mx-5">
                         <div class="service-item-inner">
                             <center class="icon">
-                                <img src="img/naruto/ligth-mode/simbolo da folha.png" class="img-fluid"  alt="">
+                                <img src="img/naruto/ligth-mode/simbolo da folha.png" class="img-fluid img-folha"  alt="">
                     
                             </center>
-                            <h4 class="text-success ">Desktop Developer</h4>
+                            <h4 class="text-danger">Desktop Developer</h4>
+                            <p class="text-secondary">Desenvolvimento de sistemas para desktop usando linguagens java ou c#</p>
                         </div>  
                     </div>
                     <!-- service item end -->
@@ -308,9 +308,10 @@
                     <div class="item col-md-3 mx-5 service-item " >
                         <div class="service-item-inner">
                             <div class="icon ">
-                                <img src="img/naruto/ligth-mode/cla uchiha.png" class="img-fluid" >
+                                <img src="img/naruto/ligth-mode/cla uchiha.png" class="img-fluid img-uchiha" >
                             </div>
-                            <h4 class="text-success">Back end Developer</h4>
+                            <h4 class="text-danger">Back end Developer</h4>
+                            <p class="text-secondary"> Desenvolvimento de sistemas para web usando o laravel que é um framework baseado em php </p>
                         </div>
                     </div>
                     <!-- service item end -->
@@ -325,33 +326,44 @@
          <section class="section portifolio" id="portifolio">
             <div class="container">
                 <div class="row">
-                    <div class="section-title padd-15">
-                        <!-- <h2>Port<span>fólio</span></h2> -->
-                    </div>
+                <center>
+                    <div class="col-4 card text-bg-dark bg-transparent border-0 " style="align-items: center;">
+                        <img src="img/naruto/ligth-mode/pergaminhos de selos.png" class="card-img" alt="...">
+                        <center class="card-img-overlay align-items-center " style="margin-top: 40px;">
+                            <h5 class="card-title text-danger">portifolio</h5>
+                        </center>
+                   </div>
+                </center>
+        
                 </div>
                 <!-- <div class="row">
                     <div class="portifolio-heading padd-15">
                         <h2>Meus ultimos Projectos:</h2>
                     </div>
                 </div> -->
-                <div class="row">
-                    <!-- portifolio item start -->
-                    <!-- <div class="portifolio-item padd-15">
-                        <div class="portifolio-inner shadow-dark">
-                            <div class="portifolio-img">
-                                <img src="img/trabalho2.png" alt="" srcset="">
-                            </div>
+                <div class="row align-content-center">
+                    <!-- portifolio item start --> 
+                    <div class="portifolio-item card col-md-3 mt-5">                     
+                                <img src="img/naruto/ligth-mode/naruto e sasuke.png" class="img-fluid" alt="" srcset="">                   
+                    </div>
+                     <!-- portifolio item end -->
+                                         <!-- portifolio item start --> 
+                    <div class="portifolio-item card col-md-3 mt-5 mx-3">                     
+                        <img src="img/naruto/ligth-mode/naruto e sasuke.png" class="img-fluid" alt="" srcset="">                   
+            </div>
+             <!-- portifolio item end -->
+                                 <!-- portifolio item start --> 
+                                 <div class="portifolio-item card col-md-3 mt-5">                     
+                                    <img src="img/naruto/ligth-mode/naruto e sasuke.png" class="img-fluid" alt="" srcset="">                   
                         </div>
-                    </div> -->
-                    <!-- portifolio item end -->
-
+                         <!-- portifolio item end -->
                 </div>
             </div>
         </section> 
-        <!-- end portifolio sectio -->
+        <!-- end portifolio section -->
         
         <!-- contact section start -->
-        <section class="contact section bg-light mt-4 pt-5" id="contact">
+        <section class="contact section bg-info mt-4 pt-5" id="contact">
                         <div class="container">
                             <div class="row">
                                 <center>
@@ -361,79 +373,35 @@
                                             <h5 class="card-title text-danger">Contacto</h5>
                                         </center>
                                    </div>
-                                   <h3 class="contact-title padd-15 text-success my-5">qualquer duvida não exite em contactatar-me</h3>
-                                   <h4 class="contact-sub-title my-5">Estou pronto para trabahar consigo</h4>
+                                   <h3 class="contact-title padd-15 text-primary my-5">qualquer duvida não exite em contactatar-me</h3>
+                                   <h4 class="contact-sub-title text-danger my-5">Estou pronto para trabahar consigo</h4>
                                 </center>
                             </div>
-                            <div class="row">
-                                <div class="img-shidori col-md-5">
-                                    <img src="img/naruto/ligth-mode/naruto e sasuke.png" class="img-fluid" alt="">
-                                </div>
-                                <div class="col-md-6">
+                            <div class="row">                               
                                     <div class="row">
                                         <!--  contact info item start-->
                                         <div class="contact-info-item col-md-4">
                                             <div class="icon"><i class="bi-phone"></i></div>
-                                            <h4>Telefone</h4>
-                                            <p>(+258) 849274591</p>
-                                            <p>(+258) 879674591</p>
+                                            <h4 class="text-info">Telefone</h4>
+                                            <p class="text-secondary">(+258) 849274591</p>
+                                            <p class="text-secondary">(+258) 879674591</p>
                                         </div>
                                         <!-- contact info item end -->
                                         <!--  contact info item start-->
                                         <div class="contact-info-item col-md-4">
                                             <div class="icon"><i class="bi-map"></i></div>
-                                            <h4>local</h4>
-                                            <p>Maputo</p>
+                                            <h4 class="text-info">local</h4>
+                                            <p class="text-secondary">Maputo</p>
                                         </div>
                                         <!-- contact info item end -->
                                         <!--  contact info item start-->
                                         <div class="contact-info-item col-md-4">
                                             <div class="icon"><i class="bi-envelope"></i></div>
-                                            <h4>E-mail</h4>
-                                            <p>eugeniochiauchiau@gmail.com</p>
+                                            <h4 class="text-info">E-mail</h4>
+                                            <p class="text-secondary">eugeniochiauchiau@gmail.com</p>
                                         </div>
                                         <!-- contact info item end -->
                                     </div>
-                                    <h3 class="contact-title text-danger mt-5"> envie um email</h3>
-                                    <!-- contacto form -->
-                                    <div class="row">
-                                        <div class="contact-form padd-15">
-                                            <div class="row">
-                                                <div class="form-item col-md-12 mb-2">
-                                                    <!-- <div class="form-group"> -->
-                                                        <input type="text" class="form-control" placeholder="nome" name="nome">
-                                                    <!-- </div> -->
-                                                </div>
-                                                <div class="form-item col-md-12 mb-2">
-                                                    <!-- <div class="form-group"> -->
-                                                        <input type="email" class="form-control" name="Email" placeholder="email" name="email">
-                                                    </div>
-                                                <!-- </div> -->
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-item col-12 mb-2">
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="assunto" name="assunto">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-item col-12 padd-15">
-                                                    <div class="form-group">
-                                                        <textarea name="mensagem" placeholder="mensagem" id="" class="form-control" cols="30" rows="4"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-item col-12 padd-15">
-                                                    <div class="form-group">
-                                                        <button type="submit"  class="btn btn-success rounded-pill mt-4">enviar mensagem</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                            
                             

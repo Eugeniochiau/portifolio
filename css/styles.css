@@ -1,32 +1,75 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap'); */
 
-/* colors */
-/* .text-primary{
-    color: #ffd400 !important;
-} */
-/* 
-.text-danger{
-    color: #d90368 !important;  
-}
-.bg-danger{
-    background-color: #d90368 !important;
-} */
-.text-dark{
-    color:#2e2943 !important;
-}
-.text-info{
-    color: #230fb3 !important;
-}
- p{
-    color:#2d2d2d !important
- }
 
+/* cores gerais */
+/* light-mode */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow:auto; */
 }
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+:root{
+    --scroled:#fff;
+    --bg-primary:#fff;
+    --bg-secondary: #dfdfdf;
+    --bg-info:#92dce5;
+    --text-dark:#2e2943;
+    /* --tex-info:#c12c2c; */
+    --text-primary:#fea116;
+    --text-secondary:#2d2d2d;
+    --text-danger:#dc3545; 
+}
+/* dark-mode */
+.dark-mode{
+    --bg-primary:#050505;
+    --bg-secondary:#3d3a4b;
+    --bg-info:#2d2d2d;
+    --text-danger:#ff007f;
+    --text-primary:#004fff;
+    --text-dark:#b1acc6;
+    --text-info:#31afd4;
+    --text-secondary:#fffc;
+    --scroled:linear-gradient(to bottom, transparent 10%,#403951 20%, transparent 90%);
+}
+
+/* cores para o bootstrap */
+.bg-primary{ background-color: var(--bg-primary) !important;}
+.bg-secondary{background-color: var(--bg-secondary) !important;}
+.bg-info{background-color: var(--bg-info) !important;}
+.text-primary{color:var(--text-primary) !important;}
+.text-dark{ color:var(--text-dark) !important;}
+.text-info{ color:  var(--text-info) !important;}
+.text-secondary{ color: var(--text-secondary) !important}
+.text-danger{ color:var(--text-danger) !important}
+
+
+/* img-mode */
+.btn-mode { 
+    margin-right: 95%;
+    margin-top: 320px;   
+}
+.btn-mode img{
+    
+    width: 60px;
+    max-width: 60px;
+    cursor: pointer;
+}
+/* .img-mode::before{
+    padding-top: 30%;
+    padding-left: 95%;
+} */
+
+
+
+
 
 body{
     margin: 0;
@@ -37,6 +80,10 @@ body{
 }
 
 /* nav-bar */
+.navbar, .main-content{
+    /* transition:all  10s ease-in-out; */
+    
+}
 .navbar,p{
     z-index: 1;
 }
@@ -61,16 +108,50 @@ body{
 }
 
 .scrolled{
-    background: #454548 !important;
+    /* background: var(--scroled); */
+    background-color: transparent;
+    /* backdrop-filter:blur(30px); */
+    /* border-bottom: 2px solid; */
+    backdrop-filter: invert(10%);
+    /* box-shadow: 0px 16px teal; */
 }
 .logo span:hover{
-    color: #fea116 !important;
+    /* color: #fea116 !important; */
 }
 /* .img-kunai:hover{
     display: none;
 } */
- 
-
+ .title{
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    background: var(--bg-secondary);
+    backdrop-filter: invert(80%);
+    position: relative;
+ }
+ .title:before{
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top:5px solid var(--text-danger);
+    border-right:5px solid var(--text-danger);
+    right: 0px;
+    top:0;
+}
+.title:after{
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom:5px solid var(--text-danger);
+    border-left:5px solid var(--text-danger);
+    left: 0px;
+    bottom:0;
+}
 .nav-item .bg-primary:active, .nav-item :hover{
  color: #dc3545 !important;
 }
@@ -115,8 +196,10 @@ a{
 
 /* about-info */
 .about-info{
-    background-image: linear-gradient(to bottom1000+``1 ``,white 5%, #bbb 95%);
-    /* background: #eadeda!important; */
+    margin-top: 50px;
+    background: var(--bg-secondary);
+    box-shadow: 150px -60px var(--bg-secondary);
+    
 }
 /* .about .card h5, .service .card h5, .contact .card h5 {
     height: 30px;
@@ -128,27 +211,45 @@ a{
     width: 100%;  
 } */
 /* skill */
-.skills{
-    background-image: linear-gradient(to bottom, #bbb 60%, #fff );
-}
+/* .skills{
+    background:var(--bg-secondary);
+} */
 .skills .skill-item{
+    
     color:#06001a;
 }
-.skills .skill-item .progress-in{
-    background-color: #df081c;
-    border-radius: 50px;
-}
-.progress{
-    border-radius: 50px;
-}
 
+.progress{
+  border-radius: 50px;
+
+}
+.skills .skill-item .progress-in{
+    background-color:var(--text-danger);
+    border-radius: 50px;
+    
+}
 /* servicos */
 .service .icon,
 .service h4,
 .service p{
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    /* transition: ; */
 }
+
+.service .service-item{
+    transition: all 2s ease-in-out;
+}
+.service .service-item:hover {
+    animation: appear 3s 0 linear;
+    text-align: center;
+    transform: scale(1.25);
+    transform-origin: 50% 50%;       
+    }
+
+    
 
 .service .icon img{
     height: 150px;
@@ -158,6 +259,13 @@ a{
 .service .card{
     text-align: center;
     justify-content: center;
+}
+
+/* contact */
+
+.contact-info-item{
+    align-items: center;
+    text-align: center;
 }
 
     @keyframes appear {
@@ -173,20 +281,6 @@ a{
         transform: scale(0deg);
         }
     } 
-    .service .icon img:hover {
-        animation: appear 3s 0 linear;
-        text-align: center;
-        transform: scale(1.25);
-        transform-origin: 50% 50%;       
-        }
-
-        .service h4:hover{
-            transform: scale(1.2);
-        }
-
-        .service .item:hover{
-            transform: scale(1.2);
-            border:0;
-        }
+    
 
         
