@@ -243,6 +243,14 @@ a{
     border-radius: 50px;
     
 }
+
+/* experience e education */
+.timeline-date{
+    display: inline-block;
+    align-items: flex-start;
+    text-align: start;
+}
+
 /* servicos */
 .service .icon,
 .service h4,

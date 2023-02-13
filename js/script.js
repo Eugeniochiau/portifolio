@@ -14,6 +14,7 @@ var nav_collapse=document.querySelector(".navbar-collapse");
         navbar.setAttribute("class","navbar navbar-expand-lg fixed-top");
         main.setAttribute("class","main-content mt-5");
         mode.classList.remove('d-none');
+        
 
     // console.log(carregamento);  
     },3450);
