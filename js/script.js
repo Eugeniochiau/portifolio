@@ -21,6 +21,16 @@ var nav_collapse=document.querySelector(".navbar-collapse");
     
    })();
    
+   $(document).ready(function() {
+    $('a.nav-link').click(function(){
+        const active=document.getElementsByClassName("active");
+        active.removeClass("active");
+      $('a.nav-link').removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+  
+
 //    navbar transparente
 window.addEventListener('scroll', function(){
     if(this.window.pageYOffset>100 && !nav_collapse.classList.contains("d-none"))

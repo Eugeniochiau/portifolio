@@ -22,7 +22,7 @@ body,.about-info,.about, .experience-education{
 :root{
     --scroled:#fff;
     --bg-primary:#fff;
-    --bg-secondary: #dfdfdf;
+    --bg-secondary: #f0f3f5;
     --bg-info:#92dce5;
     --text-dark:#2e2943;
     /* --tex-info:#c12c2c; */
@@ -167,7 +167,7 @@ body{
     border:10px solid var(--bg-secondary);
 }
 
-.nav-item .bg-primary:active, .nav-item :hover{
+.nav-item .active,.nav-item :hover{
  color: #dc3545 !important;
 }
 
@@ -213,7 +213,7 @@ a{
 .about-info{
     margin-top: 50px;
     background: var(--bg-secondary);
-    box-shadow: 150px -60px var(--bg-secondary);
+    /* box-shadow: 150px -60px var(--bg-secondary); */
     
 }
 /* .about .card h5, .service .card h5, .contact .card h5 {
@@ -345,5 +345,30 @@ a{
         }
     } 
     
-
-        
+.skill{
+    width:160px;
+    height:160px;
+    position: relative;
+}
+.outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, .15),
+                -6px -6px 10px -1px rgba(255,255,255,.7);
+    padding: 20px;
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,.2),
+                inset -4px -4px 0p 6px -1px rgba(255, 255,255, .7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
