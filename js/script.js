@@ -1,11 +1,10 @@
 var navbar = document.querySelector(".navbar");
-const mode = document.querySelector(".btn-mode");
+var mode = document.querySelector(".btn-mode");
 var nav_toggle = document.querySelector(".navbar-toggler");
 var nav_collapse = document.querySelector(".navbar-collapse");
 // antes do carregamento
 (function () {
   var main = document.querySelector(".main-content");
-
   // var container=document.querySelector(".loading");
   var carregamento = document.querySelector(".loading");
   setTimeout(function () {
@@ -13,20 +12,20 @@ var nav_collapse = document.querySelector(".navbar-collapse");
     carregamento.setAttribute("class", " loading d-none");
     navbar.setAttribute("class", "navbar navbar-expand-lg");
     main.setAttribute("class", "main-content mt-5");
-    mode.classList.remove('d-none');
+
     // console.log(carregamento);  
   }, 3450);
 
 })();
 
-$(document).ready(function () {
-  $('a.nav-link').click(function () {
-    const active = document.getElementsByClassName("active");
-    active.removeClass("active");
-    $('a.nav-link').removeClass("active");
-    $(this).addClass("active");
-  });
-});
+// $(document).ready(function () {
+//   $('a.nav-link').click(function () {
+//     const active = document.getElementsByClassName("active");
+//     active.removeClass("active");
+//     $('a.nav-link').removeClass("active");
+//     $(this).addClass("active");
+//   });
+// });
 
 
 
@@ -39,8 +38,6 @@ function dowload() {
   link.setAttribute('dowload', file);
   console.log(link);
   link.click();
-
-
 }
 
 
@@ -58,5 +55,4 @@ nav_toggle.addEventListener('click', (event) => {
     navbar.classList.remove("shadow-sm");
     return
   }
-
 });

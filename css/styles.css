@@ -16,19 +16,18 @@ body, html{
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
 body,.about-info,.about, .experience-education{
     transition:2s ease-in-out;
 }
 :root{
-    --scroled:#fff;
-    --bg-primary:#171123;
-    --bg-secondary: #372248;
-    --bg-info:#92dce5;
-    --text-dark:#fff;
-    /* --tex-info:#c12c2c; */
-    --text-primary:#fff;
-    --text-secondary:#fff;
-    --text-danger:#fff; 
+    --bg-primary:#0d0d15;
+    --bg-secondary: #2e2c3f;
+    --bg-terciary:#f000f0e3;
+    --text-dark:#c8f0f0;
+    --text-primary:#00f0f0;
+    --hover:#00d8d8;
+    --text-secondary:#0ad6d6;
 }
 /* dark-mode */
 /* .dark-mode{
@@ -46,13 +45,9 @@ body,.about-info,.about, .experience-education{
 /* cores para o bootstrap */
 .bg-primary{ background-color: var(--bg-primary) !important;}
 .bg-secondary{background-color: var(--bg-secondary) !important;}
-.bg-info{background-color: var(--bg-info) !important;}
 .text-primary{color:var(--text-primary) !important;}
 .text-dark{ color:var(--text-dark) !important;}
-.text-info{ color:  var(--text-info) !important;}
 .text-secondary{ color: var(--text-secondary) !important}
-.text-danger{ color:var(--text-danger) !important}
-
 
 /* img-mode */
 .btn-mode { 
@@ -100,14 +95,16 @@ body{
 }
 .logo a{
     font-size: 4rem;
-    background-image: linear-gradient(to right,#dc3545 40%,#fea116 70%);
+    
+    background-image: linear-gradient(90deg, var(--text-primary) 0%, var(--text-secondary) 70%);
     background-clip: text !important;
     -webkit-background-clip: text !important;
-    color: transparent !important;
+    color: transparent!important;
+    text-decoration: none;
 }
 .logo a:hover{
     font-size: 4rem;
-    background-image: linear-gradient(to right,#fea116 30%,#dc3545 80%);
+    background-image: linear-gradient(90deg, var(--text-secondary) 0%, var(--text-primary) 70%);
     background-clip: text !important;
     -webkit-background-clip: text !important;
     color: transparent !important;
@@ -122,7 +119,7 @@ body{
     /* box-shadow: 0px 16px teal; */
 }
 .logo span:hover{
-    /* color: #fea116 !important; */
+    color: #fea116 !important;
 }
 
 
@@ -133,11 +130,30 @@ body{
     max-height: min-content;
     /* height:  !important; */
 }
-
-#home .home-img img{
-    /* height: 50px; */
-    width: 30px;
+.btn{
+    background-image: linear-gradient(90deg, var(--text-primary) 0%, var(--text-secondary) 80%);
+    font-size: 1.5em;
+    
+    /* border: 5px solid linear-gradient(90deg, #62ff14 0%, #14ff3a 59%); */
 }
+.btn:hover{
+    /* background-color: var(--hover); */
+    background-color: linear-gradient(90deg, var(--text-secondary) 40%, var(--text-primary) 40%);
+    /* color: transparent !important; */
+}
+.btn-outline{
+    background-color: transparent !important;
+    color:var(--text-primary)!important;
+    border:none;
+    font-size: 1.5em;
+}
+
+.btn-outline:hover{
+    color:var(--text-secondary);
+    cursor:pointer
+}
+
+.home
 /* end home */
 
 /* .img-kunai:hover{
@@ -155,34 +171,34 @@ body{
     position: relative;
     transition: all 1.5s ease-in-out;
  }
- .title:before{
+ /* .title:before{
     content: " ";
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 40px;
     font-size: 3em;
-    border-top:10px solid var(--text-danger);
-    border-right:10px solid var(--text-danger);
+    border-top:10px solid var(--bg-secondary);
+    border-right:10px solid var(--bg-secondary);
     right: 0px;
     top:0;
 }
 .title:after{
     content: " ";
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 40px;
     border-bottom:10px solid var(--text-danger);
     border-left:10px solid var(--text-danger);
     left: 0px;
     bottom:0;
-}
-.title:hover{
+} */
+/* .title:hover{
     background-color: var(--text-danger);
     color:var(--bg-secondary) !important;
-    transform: scale(1.2);
-    position: relative;
+    /* transform: scale(1.2); */
+    /* position: relative; 
     border:10px solid var(--bg-secondary);
-}
+} */
 
 .sub-title{
     font-size: 2em;
@@ -192,7 +208,7 @@ p{
     font-size: 1em;
 }
 .nav-item .active,.nav-item :hover{
- color: #dc3545 !important;
+ color: var(--text-primary) !important;
 }
 
 .btn:hover{
@@ -236,9 +252,45 @@ a{
 /* about-info */
 .about-info{
     margin-top: 50px;
-    background: var(--bg-secondary);
-    /* box-shadow: 150px -60px var(--bg-secondary); */
-    
+    /* background: var(--bg-secondary); */
+    /* box-shadow: 150px -60px var(--bg-secondary); */   
+    background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+    url("../img/naruto/kakashi\ shidori.png");
+    background-position: center;
+    background-size: cover;
+    /* height: 85vh; */
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.about-text{
+    border:5px solid var(--bg-terciary);
+    /* border-color: var(--bg-terciary); */
+    /* margin: 30%; */
+    background-color:rgba(25, 25, 25,.9);
+    padding: 10% !important;
+    position: relative;
+    /* color:var(--bg-secondary) */
+}
+
+.about-text::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-right: 5px solid var(--bg-terciary);
+    border-left: 5px solid var(--bg-terciary);
+    border-top: 5px solid var(--bg-terciary);
+    border-bottom: 5px solid var(--bg-terciary);
+    right: 10%;
+    top:10%;
+}
+
+.about-text h3,p{
+    /* padding: 30%; */
 }
 /* .about .card h5, .service .card h5, .contact .card h5 {
     height: 30px;
@@ -260,15 +312,53 @@ a{
 
 .progress{
   border-radius: 50px;
-
+    background-color: var(--text-dark);
 }
 .skills .skill-item .progress-in{
-    background-color:var(--text-danger);
+    /* background-image:linear-gradient(90deg, #EC058E 0%, #731dd8 100%); */
+    background-image:linear-gradient(-90deg, var(--text-primary) 0%, var(--text-secondary) 90%);
     border-radius: 50px;
-    
 }
 
 /* experience e education */
+
+.experience-education{
+    /* background-image: linear-gradient(var(--text-primary),var(--text-secondary)),
+    url(/img/naruto/konan.png);
+    color:var(--bg-secondary);
+    display:inline-block; */
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+    url("../img/naruto/konan.png");
+    background-position: center;
+    background-size: cover;
+    /* height: 85vh; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-color);
+
+}
+
+.experience, .education{
+    width: 48%;
+    /* background-color: var(--text-dark) !important; */
+    background-color: rgba(255, 255,255, .75) !important;
+    color: var(--bg-secondary) !important;
+    /* opacity: .7; */
+    /* border:2px solid var(--text-primary) */
+}
+.title{
+    color:var(--bg-primary)
+}
+
+/* .education, .experience .col-md-6{
+    width: 100%;
+} */
+
+
+/* .grid{
+    background-image:linear-gradient(90deg, #62ff14 0%, #14ff3a 59%)
+} */
 .timeline-date{
     display: inline-block;
     align-items: flex-start;
@@ -312,11 +402,11 @@ a{
 .portifolio-item{
     width: 32%;
     position: relative;
-    transition: 2s ease-in-out;
+    transition: 3s ease-in-out;
 }
-.portifolio-item:hover{
-    z-index: 1;
-    transform: scale(1.3);
+
+.portifolio-item:hover img{
+    opacity: .5;
 }
 /* .portifolio-item::after{
     content: "";
@@ -361,6 +451,10 @@ a{
     text-align: center;
 }
 
+.contact{
+    
+}
+
     @keyframes appear {
         0% {
         opacity: 0;
@@ -402,3 +496,4 @@ a{
                 0.5px 0.5px 0px rgba(0,0,0,0.15),
                 0px 12px 10px -10px rgba(0,0,0,0.05);
 }
+
